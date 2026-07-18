@@ -140,29 +140,32 @@ async function loadNotifications() {
   </button>
 )}
 
-        <div className="flex items-center gap-3">
-          <div className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-full bg-green-100 font-bold text-green-700">
-            {profileImage ? (
-              <img
-                src={profileImage}
-                alt={username}
-                className="h-full w-full object-cover"
-              />
-            ) : firstLetter ? (
-              firstLetter
-            ) : (
-              <User size={21} />
-            )}
-          </div>
+      <div
+  className="flex cursor-pointer items-center gap-3"
+  onClick={() => navigate("/profile")}
+>
+  <div className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-full bg-green-100 font-bold text-green-700 hover:ring-2 hover:ring-green-500">
+    {profileImage ? (
+      <img
+        src={profileImage}
+        alt={username}
+        className="h-full w-full object-cover"
+      />
+    ) : firstLetter ? (
+      firstLetter
+    ) : (
+      <User size={21} />
+    )}
+  </div>
 
-          <div className="hidden sm:block">
-            <p className="max-w-40 truncate text-sm font-bold text-gray-900">
-              {username}
-            </p>
+  <div className="hidden sm:block">
+    <p className="max-w-40 truncate text-sm font-bold text-gray-900">
+      {username}
+    </p>
 
-            <p className="text-xs text-gray-500">ShelfLife User</p>
-          </div>
-        </div>
+    <p className="text-xs text-gray-500">ShelfLife User</p>
+  </div>
+</div>
       </div>
     </header>
   );
