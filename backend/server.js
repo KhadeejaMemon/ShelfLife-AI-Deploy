@@ -4,7 +4,7 @@ dotenv.config();
 
 const cors = require("cors");
 const dns = require("dns");
-const path = require("path");
+// const path = require("path");
 
 const connectDB = require("./config/db");
 
@@ -54,10 +54,10 @@ app.use("/api/recipes", recipeRoutes);
 
 
 // Static uploads (temporary)
-app.use(
-  "/uploads",
-  express.static(path.join(__dirname, "uploads"))
-);
+// app.use(
+//   "/uploads",
+//   express.static(path.join(__dirname, "uploads"))
+// );
 
 
 
