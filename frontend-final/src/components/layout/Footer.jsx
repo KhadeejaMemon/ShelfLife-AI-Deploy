@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function Footer() {
   const [openMenu, setOpenMenu] = useState(null);
@@ -100,10 +101,28 @@ function Footer() {
           <h3 className="mb-5 text-xl font-bold">Company</h3>
 
           <ul className="space-y-3 text-green-100">
-            <li>Home</li>
-            <li>Features</li>
-            <li>About</li>
-            <li>Contact</li>
+            <li>
+  <Link to="/" className="hover:text-white">
+    Home
+  </Link>
+</li>
+            <li>
+  <a href="#features" className="hover:text-white">
+    Features
+  </a>
+</li>
+
+<li>
+  <a href="#about" className="hover:text-white">
+    About
+  </a>
+</li>
+
+<li>
+  <a href="#contact" className="hover:text-white">
+    Contact
+  </a>
+</li>
           </ul>
         </div>
 
@@ -111,10 +130,28 @@ function Footer() {
           <h3 className="mb-5 text-xl font-bold">Features</h3>
 
           <ul className="space-y-3 text-green-100">
-            <li>Inventory</li>
-            <li>Recipes</li>
-            <li>Analytics</li>
-            <li>Notifications</li>
+            <li>
+  <Link to="/inventory" className="hover:text-white">
+    Inventory
+  </Link>
+</li>
+           <li>
+  <Link to="/recipes" className="hover:text-white">
+    Recipes
+  </Link>
+</li>
+
+<li>
+  <Link to="/analytics" className="hover:text-white">
+    Analytics
+  </Link>
+</li>
+
+<li>
+  <Link to="/notifications" className="hover:text-white">
+    Notifications
+  </Link>
+</li>
           </ul>
         </div>
 
@@ -138,7 +175,27 @@ function Footer() {
           </div>
         </div>
       </div>
+<div className="mt-10 border-t border-green-700 pt-6 text-center text-green-200">
 
+  <p className="font-semibold">
+    🏆 Developed for DYLP Vibe Coding Hackathon 2026
+  </p>
+
+  <p className="mt-2">
+    Built with React, Node.js, Express.js, MongoDB & Gemini AI
+  </p>
+
+  <div className="mt-5 space-y-1 text-sm">
+    <p className="font-semibold">Development Team</p>
+
+    <p>👩‍💻 Fiza Zulfiqar — Team Lead & Frontend Developer</p>
+
+    <p>👩‍💻 Khadeeja Memon — Backend Developer, API Integration & Deployment</p>
+
+    <p>👩‍💻 Sonia Rubab — OCR Integration</p>
+  </div>
+
+</div>
       <div className="mx-auto mt-14 max-w-7xl border-t border-green-700 pt-8 text-center text-green-200">
         © 2026 ShelfLife AI. All rights reserved.
       </div>
