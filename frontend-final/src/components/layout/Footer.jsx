@@ -197,8 +197,9 @@ function Footer() {
         <p className="mt-4 text-sm">
           <span className="font-semibold">Team:</span>{" "}
           Fiza Zulfiqar (Frontend) •
-          {" "}Khadeeja Memon (Backend & Deployment) •
-          {" "}Sonia Rubab (OCR)
+           {" "}Sonia Rubab (OCR)  •
+          {" "}Khadeeja Memon (Backend & Deployment) 
+         
         </p>
 
       </div>
