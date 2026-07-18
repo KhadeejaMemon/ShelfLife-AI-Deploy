@@ -134,27 +134,26 @@ function Footer() {
           <ul className="space-y-3 text-green-100">
 
             <li>
-              <Link to="/inventory" className="hover:text-white">
-                Inventory
-              </Link>
+               Inventory
+             
             </li>
 
             <li>
-              <Link to="/recipes" className="hover:text-white">
+            
                 Recipes
-              </Link>
+              
             </li>
 
             <li>
-              <Link to="/analytics" className="hover:text-white">
+            
                 Analytics
-              </Link>
+             
             </li>
 
             <li>
-              <Link to="/notifications" className="hover:text-white">
+              
                 Notifications
-              </Link>
+             
             </li>
 
           </ul>
