@@ -41,7 +41,7 @@ function ProductTable({ products, onEdit, onDelete }) {
   <div className="flex items-center gap-3">
     {product.image && (
       <img
-        src={`http://localhost:5000${product.image}`}
+        src={`https://shelf-life-ai-deploy.vercel.app/api${product.image}`}
         alt={product.productName}
         className="h-12 w-12 rounded-lg object-cover"
       />
