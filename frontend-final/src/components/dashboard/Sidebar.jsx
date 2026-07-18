@@ -31,16 +31,15 @@ function handleLogout() {
 }
 
   return (
-    <aside className="sticky top-0 hidden h-screen w-72 shrink-0 flex-col bg-[#0B5D37] px-5 py-7 text-white lg:flex">
+    <aside className="sticky top-0 flex h-screen w-20 md:w-72 shrink-0 flex-col bg-[#0B5D37] px-2 md:px-5 py-7 text-white">
       <div className="mb-10 flex items-center gap-3 px-3">
         <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-white/15 text-2xl">
           🌿
         </div>
-
-        <div>
-          <h1 className="text-xl font-bold">ShelfLife AI</h1>
-          <p className="text-xs text-green-100">Smart food management</p>
-        </div>
+<div className="hidden md:block">
+  <h1 className="text-xl font-bold">ShelfLife AI</h1>
+  <p className="text-xs text-green-100">Smart food management</p>
+</div>
       </div>
 
       <nav className="space-y-2">
@@ -60,7 +59,7 @@ function handleLogout() {
               }`}
             >
               <Icon size={21} />
-              <span>{item.label}</span>
+              <span className="hidden md:block">{item.label}</span>
             </button>
           );
         })}
@@ -72,7 +71,7 @@ function handleLogout() {
         className="mt-auto flex items-center gap-4 rounded-2xl px-4 py-3 text-green-100 transition hover:bg-white/10"
       >
         <LogOut size={21} />
-        Logout
+       <span className="hidden md:block">Logout</span>
       </button>
     </aside>
   );
