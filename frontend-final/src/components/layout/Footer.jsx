@@ -185,14 +185,7 @@ function Footer() {
 
             <div className="mt-10 border-t border-green-700 pt-6 text-center text-green-200">
 
-        <p className="font-semibold">
-          🏆 Developed for DYLP Vibe Coding Hackathon 2026
-        </p>
-
-        <p className="mt-2 text-sm">
-          Built with React, Node.js, Express.js & MongoDB
-        </p>
-
+      
         <p className="mt-4 text-sm">
           <span className="font-semibold">Team:</span>{" "}
           Fiza Zulfiqar (Frontend) •
