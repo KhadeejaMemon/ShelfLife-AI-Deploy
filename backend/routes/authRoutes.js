@@ -5,6 +5,7 @@ const {
   registerUser,
   loginUser,
   getProfile,
+  updateProfile,
 } = require("../controllers/authController");
 
 // Register User
@@ -14,5 +15,7 @@ router.post("/register", registerUser);
 router.post("/login", loginUser);
 
 router.get("/me", protect, getProfile);
+
+router.put("/me", protect, updateProfile);
 
 module.exports = router;

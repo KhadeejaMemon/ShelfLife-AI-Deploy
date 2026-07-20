@@ -1,6 +1,7 @@
 
 import { useEffect, useState } from "react";
 import Cropper from "react-easy-crop";
+import API from "../../services/api";
 import {
   Camera,
   Check,
@@ -106,7 +107,7 @@ function Profile() {
     );
   }
 
-  function handleUsernameSave(event) {
+ async function handleUsernameSave(event) {
     event.preventDefault();
 
     const cleanName = username.trim();
@@ -115,19 +116,26 @@ function Profile() {
       alert("Username must contain at least 3 characters.");
       return;
     }
+try {
+  const res = await API.put("/auth/me", {
+    name: cleanName,
+  });
 
-    localStorage.setItem(
-      "shelflife_user_name",
-      cleanName
-    );
+  localStorage.setItem(
+    "shelflife_user_name",
+    res.data.user.name
+  );
 
-    setSavedName(cleanName);
-    setUsername(cleanName);
-    setIsEditingName(false);
+  setSavedName(res.data.user.name);
+  setUsername(res.data.user.name);
+  setIsEditingName(false);
 
-    notifyProfileUpdated();
+  notifyProfileUpdated();
 
-    showSuccess("Username updated successfully.");
+  showSuccess("Username updated successfully.");
+} catch (err) {
+  alert(err.response?.data?.message || "Unable to update profile.");
+}
   }
 
   function handleCancelUsername() {
